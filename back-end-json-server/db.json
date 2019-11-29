@@ -1,0 +1,30 @@
+{
+  "times": [
+    {
+      	"id": 1,
+      	"nome": "Flamengo"
+    },  
+    {
+      	"id": 2,
+	"nome": "Vasco"
+    }
+  ],
+  
+  "users": [
+    {
+      "id": 1,
+      "name": "MAYARA ALVES DE SIQUEIRA",
+      "email": "mayaalvess@outlook.com"
+    },
+    {
+      "name": "Davi França Macielklklkl",
+      "email": "davifrancamaciel@hotmail.com",
+      "id": 3
+    },
+    {
+      "name": "Maria Cristina Alves de Siqueira",
+      "email": "mayaalvess@outlook.com",
+      "id": 4
+    }
+  ]
+}
