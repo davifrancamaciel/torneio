@@ -1,0 +1,16 @@
+.main-footer {
+    position: 'fixed';
+    bottom: 0px;    
+}
+
+.main-footer img {
+    max-width: 76px;
+}
+
+button {
+    margin-left: 5px;
+}
+
+.tableActions {
+    width: 150px;
+}
