@@ -13,7 +13,8 @@ export default class Grid extends Component {
         return classes;
     }
     render() {
-        const gridClasses = this.toCssClass(this.props.cols || '12')
+        
+        const gridClasses = this.toCssClassNumbers(this.props.cols || '12')
         return (
             <div className={gridClasses}>
                 {this.props.children}

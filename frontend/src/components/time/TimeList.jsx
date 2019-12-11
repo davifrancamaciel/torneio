@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { getList } from './timeActions';
-
-
+import { getList, showUpdate, showDelete } from './timeActions';
+import Button from '../common/Button';
 
 class TimeList extends Component {
 
@@ -12,22 +11,18 @@ class TimeList extends Component {
     }
 
     renderRows() {
-        
+
         const list = this.props.list || []
-        
+
         return list.map(item => (
             <tr key={item.id}>
                 <td>{item.nome}</td>
                 <td>
-                    {/* <button className='btn btn-warning'
-                        onClick={() => this.props.showUpdate(item)}>
-                        <i className='fa fa-pencil'></i>
-                    </button>
+                    <Button classButton='warning' icon='pencil'
+                        onClick={() => this.props.showUpdate(item)} />
 
-                    <button className='btn btn-danger'
-                        onClick={() => this.props.showDelete(item)}>
-                        <i className='fa fa-trash-o'></i>
-                    </button> */}
+                    <Button classButton='danger' icon='trash-o'
+                        onClick={() => this.props.showDelete(item)} />                    
                 </td>
             </tr>
         ))
@@ -54,5 +49,5 @@ class TimeList extends Component {
 }
 
 const mapStateToProps = (state) => ({ list: state.time.list })
-const mapDsipatchToProps = dispatch => bindActionCreators({ getList }, dispatch)
+const mapDsipatchToProps = dispatch => bindActionCreators({ getList, showUpdate, showDelete }, dispatch)
 export default connect(mapStateToProps, mapDsipatchToProps)(TimeList)

@@ -11,8 +11,10 @@ import TabsContent from '../common/tab/TabsContent';
 import TabHeader from '../common/tab/TabHeader';
 import TabContent from '../common/tab/TabContent';
 import List from './TimeList'
+import Form from './TimeForm';
 
-import { init } from './timeActions'
+
+import { init, create, update, remove } from './timeActions';
 
 class Time extends Component {
 
@@ -36,9 +38,15 @@ class Time extends Component {
                             <TabContent id='tabList'>
                                 <List />
                             </TabContent>
-                            <TabContent id='tabCreate'></TabContent>
-                            <TabContent id='tabUpdate'></TabContent>
-                            <TabContent id='tabDelete'></TabContent>
+                            <TabContent id='tabCreate'>
+                                <Form submitClass='primary' submitLabel='Incluir' onSubmit={this.props.create} />
+                            </TabContent>
+                            <TabContent id='tabUpdate'>
+                                <Form onSubmit={this.props.update} submitClass='info' submitLabel='Alterar' />
+                            </TabContent>
+                            <TabContent id='tabDelete'>
+                                <Form onSubmit={this.props.remove} submitClass='danger' submitLabel='Excluir' readOnly={true} />
+                            </TabContent>
                         </TabsContent>
                     </Tabs>
                 </Content>
@@ -48,6 +56,6 @@ class Time extends Component {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    init
+    init, create, update, remove
 }, dispatch)
 export default connect(null, mapDispatchToProps)(Time)

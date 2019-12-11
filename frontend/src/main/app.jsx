@@ -4,7 +4,7 @@ import { HashRouter } from 'react-router-dom'
 import Header from '../components/common/template/Header';
 import Footer from '../components/common/template/Footer';
 import SideBar from '../components/common/template/SideBar';
-// import Messages from '../components/common/messages/messages'
+import Messages from '../components/common/messages/messages'
 
 import Routes from './routes';
 
@@ -15,7 +15,7 @@ export default props => (
             <SideBar />
             <Routes />
             <Footer />
-            {/* <Messages />  */}
+            <Messages /> 
         </div>
     </HashRouter >
 )

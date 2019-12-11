@@ -1,15 +1,31 @@
 {
   "times": [
     {
-      	"id": 1,
-      	"nome": "Flamengo"
-    },  
+      "id": 2,
+      "nome": "VASCO"
+    },
     {
-      	"id": 2,
-	"nome": "Vasco"
+      "name": "flu",
+      "id": 3,
+      "nome": "FLUMINENSE"
+    },
+    {
+      "nome": "CRUZEIRO",
+      "id": 4
+    },
+    {
+      "nome": "VASCO",
+      "id": 5
+    },
+    {
+      "nome": "SÃO PAULO",
+      "id": 6
+    },
+    {
+      "nome": "SANTOS",
+      "id": 7
     }
   ],
-  
   "users": [
     {
       "id": 1,
